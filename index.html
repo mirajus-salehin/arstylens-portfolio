@@ -3,9 +3,10 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="/styles/sidebar.css">
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
 
 <body>
@@ -16,11 +17,11 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#" onclick="closeNav()">About me</a>
     <a href="#" onclick="closeNav()">Services</a>
-    <a href="#" onclick="closeNav()">Works</a>
+    <a href="gallery.html" onclick="closeNav()">Works</a>
     <a href="#" onclick="closeNav()">Contact</a>
   </div>
 
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <span onclick="openNav()">&#9776;</span>
 
   <script>
     function openNav() {
@@ -30,22 +31,48 @@
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
+
   </script>
 
   <!--SIDE NAV END-->
 
-  <div class="w3-container">
+  <!--INRO SECTION START-->
+
+  <div class="w3-display-container w3-padding">
     <div class="w3-row">
-      <div class="w3-half w3-container w3-green">
-        <h2>name section</h2>
+      <div class="w3-half w3-container w3-padding">
+        <h2 class="w3-center">Hi</h2>
+        <h1 class="w3-center typedText"></h1>
       </div>
-      <div class="w3-half w3-container w3-red">
-        <h2>picture section</h2>
+      <div class="w3-half w3-container w3-right w3-padding w3-center">
+        <img src="./imags/profileImage.jpg" alt="profile image">
       </div>
     </div>
-
   </div>
+  <script>
+    var typed = new Typed(
+      ".typedText", {
+      strings: [
+        "My name is Fahim Sums",
+        "I am a photographer",
+        "I do portrait photography",
+        "I also do theme photography",
+        "I am a sports fan",
+        "I love to sing a lot"
+      ],
+      typeSpeed: 80,
+      startDelay: 1500,
+      backDelay: 1500,
+      backSpeed: 40,
+      shuffle: false,
+      showCursor: false,
+      loop: true
+    }
+    );
+  </script>
 
+
+  <!--INTRO SECTION END-->
 
 </body>
 

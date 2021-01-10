@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/styles/imgallery.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+</head>
+
+<body>
+    <!--SIDE NAV START-->
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" onclick="closeNav()">About me</a>
+    <a href="#" onclick="closeNav()">Services</a>
+    <a href="gallery.html" onclick="closeNav()">Works</a>
+    <a href="#" onclick="closeNav()">Contact</a>
+  </div>
+
+  <span onclick="openNav()">&#9776;</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+  </script>
+
+  <!--SIDE NAV END-->
+
+    <div class="header">
+        <h1>My works</h1>
+        <p class="w3-opacity">Here are some of my works</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="/imags/img1.jpg" alt="" style="width:100%">
+            <img src="/imags/img2.jpg" alt="" style="width:100%">
+            <img src="/imags/img3.jpg" alt="" style="width:100%">
+            <img src="/imags/img4.jpg" alt="" style="width:100%">
+            <img src="/imags/img5.jpg" alt="" style="width:100%">
+            <img src="/imags/img6.jpg" alt="" style="width:100%">
+            <img src="/imags/img7.jpg" alt="" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="/imags/img8.jpg" alt="" style="width:100%">
+            <img src="/imags/img9.jpg" alt="" style="width:100%">
+            <img src="/imags/img10.jpg" alt="" style="width:100%">
+            <img src="/imags/img11.jpg" alt="" style="width:100%">
+            <img src="/imags/img12.jpg" alt="" style="width:100%">
+            <img src="/imags/img13.jpg" alt="" style="width:100%">
+            <img src="/imags/img14.jpg" alt="" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="/imags/img15.jpg" alt="" style="width:100%">
+            <img src="/imags/img16.jpg" alt="" style="width:100%">
+            <img src="/imags/img17.jpg" alt="" style="width:100%">
+            <img src="/imags/img18.jpg" alt="" style="width:100%">
+            <img src="/imags/img19.jpg" alt="" style="width:100%">
+            <img src="/imags/img20.jpg" alt="" style="width:100%">
+            <img src="/imags/img21.jpg" alt="" style="width:100%">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

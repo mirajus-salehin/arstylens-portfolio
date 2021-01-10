@@ -1,0 +1,25 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    width: 60%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
+    border-radius:10px;
+}
+
+img:hover {
+    filter: grayscale(0%);
+    border-radius: 0px;
+    border-top-left-radius: 30px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+span {
+    padding-left: 10px;
+    font-size: 30px;
+    cursor: pointer
+}
