@@ -6,9 +6,21 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
 
 <body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 
   <!-- Navbar (sit on top) -->
   <div class="w3-top w3-black">
@@ -19,13 +31,13 @@
       </a>
       <a href="#home" class="w3-bar-item w3-button">HOME</a>
       <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> MY WORKS</a>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">MY WORKS</a>
       <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     </div>
   </div>
@@ -52,12 +64,12 @@
     <div class="w3-row">
       <div class="w3-col m6 w3-center w3-padding-large">
         <p><b><i class="fa fa-user w3-margin-right"></i>Fahim Sums</b></p><br>
-        <img src="/imags/profileImage.jpg" class="w3-round w3-image" alt="Photo of Me"
-          width="500" height="333">
+        <img src="/imags/profileImage.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333"
+          data-aos="slide-right">
       </div>
 
       <!-- Hide this text on small devices -->
-      <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <div class="w3-col m6 w3-hide-small w3-padding-large" data-aos="slide-left">
         <p>
           <li>Sports freak</li>
           <li>Love to sing</li>
@@ -66,30 +78,30 @@
       </div>
     </div>
     <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-    <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
-    <div class="w3-light-grey">
+    <p class="w3-wide" data-aos="fade-down"><i class="fa fa-camera"></i>Photography</p>
+    <div class="w3-light-grey" data-aos="fade-down">
       <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
     </div>
-    <p class="w3-wide"><i class="fa fa-laptop"></i>Illustrations</p>
-    <div class="w3-light-grey">
+    <p class="w3-wide" data-aos="fade-down"><i class="fa fa-laptop"></i>Illustrations</p>
+    <div class="w3-light-grey" data-aos="fade-down">
       <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
     </div>
-    <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
-    <div class="w3-light-grey">
+    <p class="w3-wide" data-aos="fade-down"><i class="fa fa-photo"></i>Photoshop</p>
+    <div class="w3-light-grey" data-aos="fade-down">
       <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
     </div>
   </div>
 
   <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-    <div class="w3-third w3-section">
+    <div class="w3-third w3-section" data-aos="flip-left" data-aos-delay="500">
       <span class="w3-xlarge">14+</span><br>
       Partners
     </div>
-    <div class="w3-third w3-section">
+    <div class="w3-third w3-section" data-aos="flip-left" data-aos-delay="500">
       <span class="w3-xlarge">3+</span><br>
       Happy Clients
     </div>
-    <div class="w3-third w3-section">
+    <div class="w3-third w3-section" data-aos="flip-left" data-aos-delay="500">
       <span class="w3-xlarge">2+</span><br>
       yeasr of experience
     </div>
@@ -112,42 +124,41 @@
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
         <img src="/images/img1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="The mist over the mountains">
+          alt="Random Clicks" data-aos="zoom-in" data-aos-duration="1000">
       </div>
 
       <div class="w3-col m3">
         <img src="/images/img3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Coffee beans">
+          alt="Random Clicks" data-aos="zoom-in" data-aos-duration="1000">
       </div>
 
       <div class="w3-col m3">
-        <img src="/images/img4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Bear closeup">
+        <img src="/images/img4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="নীলাদ্রি" data-aos="zoom-in" data-aos-duration="1000">
       </div>
 
       <div class="w3-col m3">
-        <img src="/images/img8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Quiet ocean">
+        <img src="/images/img8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="নীলাদ্রি" data-aos="zoom-in" data-aos-duration="1000">
       </div>
     </div>
 
     <div class="w3-row-padding w3-center w3-section">
       <div class="w3-col m3">
-        <img src="/images/img9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+        <img src="/images/img9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="শরৎকামীনি" data-aos="zoom-in" data-aos-duration="1000">
       </div>
 
       <div class="w3-col m3">
         <img src="/images/img15.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="My beloved typewriter">
+          alt="Barcelona away kit 2020/21" data-aos="zoom-in" data-aos-duration="1000">
       </div>
 
       <div class="w3-col m3">
         <img src="/images/img19.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Empty ghost train">
+          alt="কৃষ্ণচূড়া" data-aos="zoom-in" data-aos-duration="1000">
       </div>
 
       <div class="w3-col m3">
-        <img src="/images/img13.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+        <img src="/images/img13.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Urban street photography" data-aos="zoom-in" data-aos-duration="1000">
       </div>
     </div>
   </div>
@@ -173,65 +184,37 @@
   <div class="w3-content w3-container w3-padding-64" id="contact">
     <h3 class="w3-center">WHERE I WORK</h3>
     <p class="w3-center"><em>I'd love your feedback!</em></p>
-
     <div class="w3-row w3-padding-32 w3-section">
+
+      <!--Map-->
       <div class="w3-col m4 w3-container">
-        <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+        <div id="mapid" style="height:180px" data-aos="flip-down" data-aos-duration="1000"></div>
+        <script src="map.js"></script>
       </div>
+
+
       <div class="w3-col m8 w3-panel">
-        <div class="w3-large w3-margin-bottom">
-          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        <div class="w3-large w3-margin-bottom" data-aos="fade-right">
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +880 1777-136681<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+          fahimns75@gmail.com<br>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <div class="w3-xlarge w3-section">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey" data-aos="fade-up"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section" data-aos="fade-down" data-aos-duration="1000">
+      <p>Reach me on</p>
+      <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/artsylensbyfahim"></a>
+      <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/artsylens_by_fahim/"></a>
+      <a class="fa fa-envelope w3-hover-opacity" href="mailto:fahimns75@gmail.com"></a>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-        class="w3-hover-text-green">w3.css</a></p>
   </footer>
 
-  <script>
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-
-    // Change style of navbar on scroll
-    window.onscroll = function () { myFunction() };
-    function myFunction() {
-      var navbar = document.getElementById("myNavbar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-      } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-      }
-    }
-
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-  </script>
+  <script src="main.js"></script>
 
 </body>
 

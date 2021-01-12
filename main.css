@@ -15,7 +15,9 @@ body,
     line-height: 1.8;
     scroll-behavior: smooth;
   }
-
+a:hover,a:active,a:visited,a:link{
+  text-decoration: none;
+}
   .img-hover{
     transition: .5s ease;
     transform: scale(1.2);
